@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_calendar">
+
+    <fragment
+        android:id="@+id/nav_calendar"
+        android:name="com.example.crun.ui.calendar.CalendarFragment"
+        android:label="@string/menu_calendar"
+        tools:layout="@layout/fragment_calendar" >
+        <action
+            android:id="@+id/action_nav_calendar_to_nav_settings"
+            app:destination="@id/nav_settings" />
+        <action
+            android:id="@+id/action_nav_calendar_to_nav_collection"
+            app:destination="@id/nav_collection" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_collection"
+        android:name="com.example.crun.ui.collection.CollectionFragment"
+        android:label="@string/menu_collection"
+        tools:layout="@layout/fragment_collection" >
+        <action
+            android:id="@+id/action_nav_collection_to_nav_calendar"
+            app:destination="@id/nav_calendar" />
+        <action
+            android:id="@+id/action_nav_collection_to_nav_settings"
+            app:destination="@id/nav_settings" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_settings"
+        android:name="com.example.crun.ui.settings.SettingsFragment"
+        android:label="@string/menu_settings"
+        tools:layout="@layout/fragment_settings" >
+        <action
+            android:id="@+id/action_nav_settings_to_nav_calendar"
+            app:destination="@id/nav_calendar" />
+        <action
+            android:id="@+id/action_nav_settings_to_nav_collection"
+            app:destination="@id/nav_collection" />
+    </fragment>
+</navigation>

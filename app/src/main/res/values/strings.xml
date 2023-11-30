@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">cRun</string>
+
+    <string name="nav_header_title">VERSION 1.0.0</string>
+
+    <string name="menu_calendar">Calendar</string>
+    <string name="menu_collection">Collection</string>
+    <string name="menu_settings">Settings</string>
+
+</resources>
