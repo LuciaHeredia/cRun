@@ -21,15 +21,20 @@ class CollectionFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val collectionViewModel = ViewModelProvider(this).get(CollectionViewModel::class.java)
 
+        // viewModel config
+        val collectionViewModel = ViewModelProvider(this)[CollectionViewModel::class.java]
+
+        // binding config
         _binding = FragmentCalendarBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
+        // objects config
         val textView: TextView = binding.textCalendar
         collectionViewModel.text.observe(viewLifecycleOwner) {
             textView.text = it
         }
+
         return root
     }
 
